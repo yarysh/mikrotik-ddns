@@ -1,0 +1,9 @@
+### Validate Cloudflare DNS token
+GET https://api.cloudflare.com/client/v4/user/tokens/verify
+Authorization: Bearer {{cf_token}}
+Content-Type: application/json
+
+### Get Cloudflare DNS record identifier
+GET https://api.cloudflare.com/client/v4/zones/{{zone_id}}/dns_records?name={{domain}}
+Authorization: Bearer {{cf_token}}
+Content-Type: application/json
